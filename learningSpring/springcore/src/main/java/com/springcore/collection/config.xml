@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+   http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+   http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+	<!-- Your bean definitions go here -->
+	<!-- setting employee bean -->
+	<!-- setting employee name -->
+	<bean id="employee1" class="com.springcore.collection.Employee">
+		<property name="employeeName">
+			<value>Spiderman</value>
+		</property>
+		<property name="phones">
+			<list>
+				<value>1114567</value>
+				<value>9801657</value>
+				<value>9876456</value>
+				<value>6784567</value>
+				<value>0984567</value>
+				<value>1234567</value>
+				<null />
+			</list>
+		</property>
+		<property name="address">
+			<set>
+				<value>Delhi</value>
+				<value>Kanpur</value>
+				<value>Banglore</value>
+				<value>Pune</value>
+				<value>Pune</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="Java" value="4 month"></entry>
+				<entry key="c++" value="2 month"></entry>
+				<entry key="JavaScript" value="6 month"></entry>
+				<entry key="Python" value="2 days"></entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="@">64</prop>
+				<prop key=" ">32</prop>
+				<prop key="A">65</prop>
+				<prop key="a">97</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
